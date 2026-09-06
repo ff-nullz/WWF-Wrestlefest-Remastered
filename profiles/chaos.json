@@ -1,0 +1,10 @@
+{
+  "name": "chaos",
+  "description": "chaos: random run-ins + exit the ring at will (mods runins + exitring stacked)",
+  "category": "fun",
+  "mode": "tag",
+  "mods": [
+    "runins",
+    "exitring"
+  ]
+}

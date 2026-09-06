@@ -1,0 +1,43 @@
+17:16:17 arena generic-ring: 11 pictures, theme: a completely plain, neutral, unbranded indoor wrestling arena template: flat mid-grey canvas mat with no logo or lettering, plain dark-grey apron skirt with no banner, plain steel-grey ring posts with plain turnbuckle pads (no logos), clean white steel guard rails, a flat dark charcoal concrete floor with its perspective lines, and dark unlit seating tiers. No text, no flags, no signage, no colour accents - a blank canvas that a theme can be painted over later
+17:16:17 ring/ring.png: first picture (becomes the anchor)
+17:16:17 provider: codex
+17:17:19 ring/ring.png: 1402x1122 scaled to 640x512
+17:17:19 ring/ring.png: ok (1 / 11)
+17:17:19 arena generic-ring: done 1 ok 1 missed 0
+17:18:56 arena generic-ring: 11 pictures, theme: STRICTLY GREYSCALE (black, white and greys only) crisp 16-colour arcade pixel art, flat shading, no gradients: a completely plain, neutral, unbranded indoor wrestling arena template - flat mid-grey canvas mat with no logo or lettering, plain dark-grey apron skirt with no banner, plain steel-grey ring posts with plain turnbuckle pads (no logos), clean white steel guard rails, a flat dark charcoal concrete floor with its perspective lines, dark unlit seating tiers. No 
+17:18:56 ring/ring.png: with anchor arenas/generic-ring/_gen/ring/ring.png
+17:18:56 provider: codex
+17:27:56 codex timeout
+17:27:56 codex try 1: nothing came back
+17:29:09 arena generic-ring: 11 pictures, theme: STRICTLY GREYSCALE (black, white and greys only) crisp 16-colour arcade pixel art, flat shading, no gradients: a completely plain, neutral, unbranded indoor wrestling arena template - flat mid-grey canvas mat with no logo or lettering, plain dark-grey apron skirt with no banner, plain steel-grey ring posts with plain turnbuckle pads (no logos), clean white steel guard rails, a flat dark charcoal concrete floor with its perspective lines, dark unlit seating tiers. No 
+17:29:09 ring/ring.png: with anchor arenas/generic-ring/_gen/ring/ring.png
+17:29:09 provider: codex
+17:30:32 arena generic-ring: 11 pictures, theme: STRICTLY GREYSCALE (black, white and greys only) crisp 16-colour arcade pixel art, flat shading, no gradients: a completely plain, neutral, unbranded indoor wrestling arena template - flat mid-grey canvas mat with no logo or lettering, plain dark-grey apron skirt with no banner, plain steel-grey ring posts with plain turnbuckle pads (no logos), clean white steel guard rails, a flat dark charcoal concrete floor with its perspective lines, dark unlit seating tiers. No 
+17:30:32 ring/ring.png: first picture (becomes the anchor)
+17:30:32 provider: codex
+17:32:10 ring/ring.png: 1402x1122 scaled to 640x512
+17:32:10 ring/ring.png: ok (1 / 11)
+17:32:10 arena generic-ring: done 1 ok 1 missed 0
+17:36:44 arena generic-ring: 11 pictures, theme: STRICTLY GREYSCALE (black, white and greys only), crisp flat-shaded arcade pixel art with clean hard edges and no gradients: a completely plain, unbranded wrestling ring template. Flat mid-grey canvas mat with NO logo and NO lettering; plain dark-grey apron skirt with NO banner; ring posts drawn CLEAN and SIMPLE - each post a straight steel-grey pillar with three plain rounded turnbuckle pads stacked on it, evenly spaced, cleanly outlined, no logos, no clutter; clean
+17:36:45 ring/ring.png: first picture (becomes the anchor)
+17:36:45 provider: codex
+17:37:57 ring/ring.png: 1402x1122 scaled to 640x512
+17:37:57 ring/ring.png: ok (1 / 11)
+17:37:57 arena generic-ring: done 1 ok 1 missed 0
+17:38:27 scene ring: build/arena-preview/wwf/ring_0.png -> codex (640x512)
+17:38:27 provider: codex
+17:47:27 codex timeout
+17:47:27 scene ring: 1402x1122 scaled to 640x512
+17:47:27 scene ring: ring.png sliced
+17:47:27 scene ring: crowd_0.png sliced
+17:47:27 scene ring: crowd_1.png sliced
+17:47:28 scene ring: crowd_2.png sliced
+17:49:13 arena generic-ring: 11 pictures, theme: STRICTLY GREYSCALE (black, white and greys only), crisp flat-shaded arcade pixel art with clean hard edges and no gradients: make this ring completely PLAIN and UNBRANDED. Flat mid-grey canvas mat with NO logo and NO lettering; plain dark-grey apron skirt with NO banner and NO curtain pattern; keep the rails, the floor and its lines exactly as they are, just in greyscale. Remove every logo, every word, every colour. Nothing added - no posts, no rim, no bolts, no stri
+17:49:13 ring/ring.png: with anchor arenas/generic-ring/_gen/ring/crowd_0.png
+17:49:13 provider: codex
+17:50:14 arena generic-ring: 11 pictures, theme: STRICTLY GREYSCALE (black, white and greys only), crisp flat-shaded arcade pixel art with clean hard edges and no gradients: make this ring completely PLAIN and UNBRANDED. Flat mid-grey canvas mat with NO logo and NO lettering; plain dark-grey apron skirt with NO banner and NO curtain pattern; keep the rails, the floor and its lines exactly as they are, just in greyscale. Remove every logo, every word, every colour. Nothing added - no posts, no rim, no bolts, no stri
+17:50:14 ring/ring.png: first picture (becomes the anchor)
+17:50:14 provider: codex
+17:51:16 ring/ring.png: 1402x1122 scaled to 640x512
+17:51:16 ring/ring.png: ok (1 / 11)
+17:51:16 arena generic-ring: done 1 ok 1 missed 0

@@ -1,0 +1,9 @@
+{
+  "name": "heavyhits",
+  "description": "human hits do 3x damage (human_hit_mult 1..9)",
+  "mods": [
+    "heavyhits"
+  ],
+  "category": "fun",
+  "mode": "tag"
+}

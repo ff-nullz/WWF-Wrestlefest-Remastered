@@ -1,0 +1,9 @@
+{
+  "name": "trainer",
+  "description": "practice: unlimited energy (everyone) and no clock",
+  "mods": [
+    "trainer"
+  ],
+  "category": "practice",
+  "mode": "tag"
+}

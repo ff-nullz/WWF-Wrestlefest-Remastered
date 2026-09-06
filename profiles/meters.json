@@ -1,0 +1,9 @@
+{
+  "name": "meters",
+  "description": "CPU energy meters on the HUD (meters)",
+  "category": "misc",
+  "mode": "tag",
+  "mods": [
+    "meters"
+  ]
+}

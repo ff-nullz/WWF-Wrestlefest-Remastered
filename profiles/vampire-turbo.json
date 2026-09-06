@@ -1,0 +1,10 @@
+{
+  "name": "vampire-turbo",
+  "description": "parasitic + turbo stacked - two rule mods in one profile (sparse layers merge in order)",
+  "mods": [
+    "parasitic",
+    "turbo"
+  ],
+  "category": "fun",
+  "mode": "tag"
+}

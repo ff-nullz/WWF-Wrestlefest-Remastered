@@ -1,0 +1,16 @@
+/* Nuklear implementation unit for the in-engine editor (src/editor.c).
+ * Vendored single headers: src/ext/nuklear.h (public domain, 4.9.4) and
+ * src/ext/nuklear_sdl_renderer.h (SDL2 renderer backend). Only this file
+ * defines the implementation macros. */
+#define NK_INCLUDE_FIXED_TYPES
+#define NK_INCLUDE_STANDARD_IO
+#define NK_INCLUDE_STANDARD_VARARGS
+#define NK_INCLUDE_DEFAULT_ALLOCATOR
+#define NK_INCLUDE_VERTEX_BUFFER_OUTPUT
+#define NK_INCLUDE_FONT_BAKING
+#define NK_INCLUDE_DEFAULT_FONT
+#define NK_IMPLEMENTATION
+#define NK_SDL_RENDERER_IMPLEMENTATION
+#include <SDL.h>
+#include "ext/nuklear.h"
+#include "ext/nuklear_sdl_renderer.h"

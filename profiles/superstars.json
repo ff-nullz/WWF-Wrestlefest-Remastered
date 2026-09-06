@@ -1,0 +1,14 @@
+{
+  "name": "superstars",
+  "description": "the WWF Superstars roster - Andre, Savage, Duggan, Honky Tonk join the select grid (cols 6-7)",
+  "category": "misc",
+  "mode": "tag",
+  "mods": ["superstars", "wardrobe"],
+  "disabled": [],
+  "arenas": {
+    "5": "challenge",
+    "1": "cage",
+    "7": "wwf",
+    "0": "wwf"
+  }
+}

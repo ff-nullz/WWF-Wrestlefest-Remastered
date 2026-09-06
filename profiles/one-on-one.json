@@ -1,0 +1,9 @@
+{
+  "name": "one-on-one",
+  "description": "singles: no partners, 1v1 (the tournament card)",
+  "mods": [
+    "one-on-one"
+  ],
+  "category": "modes",
+  "mode": "tag"
+}

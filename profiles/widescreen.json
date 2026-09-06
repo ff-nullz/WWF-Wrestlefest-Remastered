@@ -1,0 +1,9 @@
+{
+  "name": "widescreen",
+  "description": "zoomed-out camera: ~33% more ring on screen",
+  "mods": [
+    "widescreen"
+  ],
+  "category": "camera",
+  "mode": "tag"
+}

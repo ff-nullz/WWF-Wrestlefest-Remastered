@@ -1,0 +1,9 @@
+{
+  "name": "battle-royale",
+  "description": "rumble with 8 men in the ring and fast entrances",
+  "category": "modes",
+  "mods": [
+    "battle-royale"
+  ],
+  "mode": "rumble"
+}

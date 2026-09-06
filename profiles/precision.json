@@ -1,0 +1,9 @@
+{
+  "name": "precision",
+  "description": "deterministic grapple throws: direction + button = the same move every time",
+  "mods": [
+    "precision"
+  ],
+  "category": "controls",
+  "mode": "tag"
+}

@@ -1,0 +1,9 @@
+{
+  "name": "hardcore",
+  "description": "weapons come INTO the ring, no count-outs",
+  "mods": [
+    "hardcore"
+  ],
+  "category": "modes",
+  "mode": "tag"
+}

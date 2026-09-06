@@ -1,0 +1,10 @@
+{
+  "name": "mode_rules",
+  "group": "rules",
+  "kind": "u16",
+  "desc": "sparse mod layer of mode_rules: only the rules it sets, merged over the stock table in profile order (wfengine --sparsify)",
+  "overrides": {
+    "countout_enabled": 0,
+    "weapons_mode": 2
+  }
+}

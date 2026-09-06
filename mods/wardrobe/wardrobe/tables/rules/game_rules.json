@@ -1,0 +1,18 @@
+{
+  "name": "game_rules",
+  "group": "rules",
+  "kind": "u16",
+  "desc": "sparse mod layer of game_rules: only the rules it sets, merged over the stock table in profile order (wfengine --sparsify)",
+  "overrides": {
+    "ref_knockdown": 1,
+    "cpu_energy_meters": 1,
+    "exit_ring": 1,
+    "backup_avg_secs": 1,
+    "extended_moves": 1,
+    "exit_ring_hold": 70,
+    "exit_ring_climb": 1,
+    "toprope_out": 1,
+    "pin_outside": 1,
+    "ko_dq": 1
+  }
+}

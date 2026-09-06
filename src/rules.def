@@ -1,0 +1,68 @@
+/* rules.def — THE list of mod rules. One line per rule, and everything else
+ * is generated from it (X-macro, included by engine.h / modrules.c):
+ *
+ *   GAME_RULE(ENUM, "label", default, "help")   ->  game_rules row (MODR_* enum,
+ *                                                   default, label, editor help)
+ *   MODE_RULE(ENUM, "label", default, "help")   ->  mode_rules row (MODE_*)
+ *
+ * Rows are APPENDED, never reordered: a mod's sparse layer names rows by
+ * label, but the packed table is positional and saved paks are indexed.
+ * Add a rule = add one line here + the hook that reads it (src/modhooks.c
+ * for gameplay). `wfengine --rules-doc` prints the two tables as markdown.
+ * Stock values must stay NEUTRAL (the stock pak plays byte-for-byte stock). */
+
+/* ---- game_rules: gameplay switches, all neutral in stock ------------- */
+GAME_RULE(MODR_UNL_ENERGY,      "unlimited_energy",   0x0000, "0 = stock. 1 = PAD HUMANS never lose energy. 2 = nobody does. (refill per frame)")
+GAME_RULE(MODR_UNL_TIME,        "unlimited_time",     0x0000, "1 = the match clock never ticks (hud 0x26370 gate).")
+GAME_RULE(MODR_DIFFICULTY,      "difficulty_offset",  0x0080, "128 = stock. More = the CPU wins tie-up exchanges like a later stage (row shift on the 0xF878 bias table); less = easier.")
+GAME_RULE(MODR_SPEED_HUMAN,     "speed_pct_human",    0x0064, "Walk/run speed of pad humans, percent. 100 = stock.")
+GAME_RULE(MODR_SPEED_CPU,       "speed_pct_cpu",      0x0064, "Walk/run speed of CPU/autopilot men, percent. 100 = stock.")
+GAME_RULE(MODR_KICKOUT_DELAY,   "cpu_kickout_delay",  0x0080, "128 = stock. More = a pinned CPU kicks out N half-counts LATER (easier pins); less = sooner.")
+GAME_RULE(MODR_REF_KO,          "ref_knockdown",      0x0000, "1 = strikes FLOOR the referee: no pin counts (and no fresh hunts) until he recovers. The pin cue survives - cover away, nobody counts.")
+GAME_RULE(MODR_REF_DOWN_FRAMES, "ref_down_frames",    0x0708, "Referee recovery time in frames (1800 = 30 s, 480 = 8 s).")
+GAME_RULE(MODR_WEAPON_DQ,       "weapon_dq",          0x0000, "1 = a LANDED weapon swing disqualifies the swinger's team on the spot (tag only).")
+GAME_RULE(MODR_CPU_METERS,      "cpu_energy_meters",  0x0000, "1 = the CPU men's HUD rows show their gauge + portrait (stock shows an empty seat / BUY-IN plate). Buy-in presses still work.")
+GAME_RULE(MODR_GRAPPLE_GAUGE,   "grapple_gauge",      0x0000, "1 = a small bar floats over a grappling pair: the hold clock draining. GREEN = holding, RED = the throw window is open.")
+GAME_RULE(MODR_EXIT_RING,       "exit_ring",          0x0000, "1 = hold INTO a rope you are touching for ~half a second to hop out to ringside (tag only, never the cage).")
+GAME_RULE(MODR_BACKUP_AVG,      "backup_avg_secs",    0x0000, "0 = off. Otherwise a random wrestler who is not in the match runs in about every N seconds: down the aisle, climbs in over the top rope (the rumble entry), brawls a random man (never legal: no pin, no count-out), then climbs out through the side ropes and leaves. Tag only. See backup_max / backup_stay_frames.")
+GAME_RULE(MODR_BACKUP_MAX,      "backup_max",         0x0002, "How many backup run-ins can happen per match.")
+GAME_RULE(MODR_BACKUP_STAY,     "backup_stay_frames", 0x0000, "0 = no timer: a backup brawls until he is THROWN OUT over the top rope, then walks off. Otherwise a stay timer in frames (600 = 10 s, 3600 = 1 min).")
+GAME_RULE(MODR_CAM_ZOOM,        "camera_zoom_pct",    0x0064, "100 = stock 320x240. Smaller = ZOOMED OUT: 75 shows ~33% more ring (up to 512x384 at 63). Match view only; the HUD anchors to the view edges.")
+GAME_RULE(MODR_GRAPPLE_PICK,    "grapple_pick",       0x0000, "1 = DETERMINISTIC throws from the facelock: held direction picks the row (neutral/UP/DOWN), B1/B2/both picks the column. Same input = same move, always stock-reachable.")
+GAME_RULE(MODR_CAM_FIXED,       "camera_fixed",       0x0000, "1 = LOCKED 512x384 view centred on the arena - the whole ring is always on screen and the camera NEVER pans. Overrides camera_zoom_pct.")
+GAME_RULE(MODR_EXT_MOVES,       "extended_moves",     0x0000, "1 = NEW capabilities: strikes knock a climbing / perched man OFF the buckle (with toprope_out: out of the ring). The CPU learns to do it too.")
+GAME_RULE(MODR_HIT_MULT_HUMAN,  "human_hit_mult",     0x0001, "Damage dealt by a HUMAN player is multiplied: 1 = stock, 2 = double, up to 9 - strikes, tie-up knees and throws alike (throws since 2026-09-05). CPU hits are unchanged.")
+GAME_RULE(MODR_EXIT_HOLD,       "exit_ring_hold",     0x0020, "Frames the stick must push into a rope before you leave the ring (32 = ~0.5 s, 115 = 2 s, 172 = 3 s).")
+GAME_RULE(MODR_EXIT_ROPES,      "exit_ring_ropes",    0x0000, "Which ropes count for exit_ring: bits right 1, left 2, top 4, bottom 8; 0 = any rope.")
+GAME_RULE(MODR_EXIT_CLIMB,      "exit_ring_climb",    0x0000, "1 = walk to the near rope and CLIMB OUT through the ropes (the rumble elimination climb); 0 = hop over the rope.")
+GAME_RULE(MODR_VIDEO_SMOOTH,    "video_smooth",       0x0001, "1 = bilinear-filtered scaling of the frame (MAME's default look); 0 = crisp nearest-neighbour pixels. WF_SMOOTH=0|1 overrides.")
+GAME_RULE(MODR_BADGE_HUMAN,     "badge_human",        0x0000, "1 = the 1P/2P chip stays over every pad-driven man for the whole match and follows the pad when it changes hands (tag), so you always see WHO you control. Stock shows it for ~2 s at the start.")
+GAME_RULE(MODR_BADGE_CPU,       "badge_cpu",          0x0000, "1 = a CPU tag floats over every CPU-driven man (a CPU wrestler, or a human's partner on autopilot). With badge_human it makes the tag switching visible.")
+GAME_RULE(MODR_DT_STOMP,        "dt_stomp",           0x0001, "1 = in the buckle double team (tag out with the opponent down in your corner: your partner holds his legs) the man who comes in can STOMP him - B1 over the pile (~4-5 stomps before he kicks out). 0 = the stock rows: only the corner dive works on a held man.")
+GAME_RULE(MODR_THROW_OUT,       "throw_out",          0x0000, "1 = a bodyslam, press slam or backdrop throws the victim OVER THE ROPES to ringside wherever it happens in the ring (the ring-out view follows). 0 = stock: he lands on the mat.")
+GAME_RULE(MODR_TOPROPE_OUT,     "toprope_out",        0x0000, "1 = with extended_moves, a strike that knocks a climbing / perched man off the buckle sends him OUT of the ring instead of onto the mat.")
+GAME_RULE(MODR_PIN_ANYONE,      "pin_anyone",         0x0000, "1 = anyone can pin anyone: a non-legal man (a run-in partner, a backup) can be covered and can cover, and the referee counts it. 0 = stock: only the legal man on the legal man.")
+GAME_RULE(MODR_PIN_OUTSIDE,     "pin_outside",        0x0000, "1 = covers count at RINGSIDE too - the referee joins the pile outside and counts. 0 = stock: no count outside the ring.")
+GAME_RULE(MODR_RUMBLE_ENDLESS,  "rumble_endless",     0x0000, "1 = ENDLESS RUMBLE: the entrant pool re-opens once everyone has walked in (eliminated men return), so the rumble runs until you are eliminated - there is no last-man win.")
+GAME_RULE(MODR_KO_DQ,           "ko_dq",              0x0000, "1 = KNOCKOUT: a man whose energy hits 0 is OUT - eliminated in the rumble (he walks off), or his team loses the match on the spot. Applies to humans too.")
+GAME_RULE(MODR_RUMBLE_ROTATE,   "rumble_rotate",      0x0000, "1 = ROTATE: when your man is eliminated from the rumble it is not GAME OVER - you take over the next entrant to walk in (portrait, aisle, climb) in your own seat.")
+GAME_RULE(MODR_PARASITIC,       "parasitic_pct",      0x0000, "PARASITIC energy: 0 = off; n = that percent of the energy every hit takes from the victim is GIVEN to the man who landed it (100 = the full amount, up to his full gauge). Both humans and the CPU feed.")
+GAME_RULE(MODR_TURBO,           "turbo",              0x0000, "TURBO: 0 = off; 1..5 = the wrestlers move and animate faster - walking, running, punches, kicks, throws, all at 120/140/160/180/200%. The match clock, ring-out count, pin count and referee run at normal speed. Stacks with speed_pct_human/cpu.")
+GAME_RULE(MODR_AI_COMMIT,       "ai_commit",          0x0000, "0 = stock CPU: it re-rolls its move policy every free frame (the flip-flopping). n = a CPU COMMITS to a decision for up to n frames - it re-rolls only when the opponent's state class or the range bucket changes, or its move has fired. 24-40 reads like a player; the wrestler's own policy tables still decide WHAT he does.")
+
+/* ---- mode_rules: the MATCH MODE as data, stock values by default ------ */
+MODE_RULE(MODE_TEAM_SIZE,       "team_size",          0x0002, "Men per side (1 = singles, 2 = tag, 3 = trios with rotating tags).")
+MODE_RULE(MODE_PIN,             "pin_enabled",        0x0001, "1 = pinfalls decide the match; 0 = covers never count.")
+MODE_RULE(MODE_REF,             "ref_enabled",        0x0001, "1 = the referee is in the ring (counts, ushers); 0 = no referee object.")
+MODE_RULE(MODE_COUNTOUT,        "countout_enabled",   0x0001, "1 = the ring-out 20-count runs; 0 = no count-outs, brawl outside as long as you like.")
+MODE_RULE(MODE_WEAPONS,         "weapons_mode",       0x0001, "0 = no weapons, 1 = stock (ringside steps + box in the ring-out view), 2 = hardcore: weapons can be carried INTO the ring.")
+MODE_RULE(MODE_TIME_MIN,        "time_limit_min",     0x0030, "Match clock in BCD minutes (0x15 = 15 minutes, 0x30 stock); 0 = no time limit.")
+MODE_RULE(MODE_R_BELL,          "rumble_bell",        0x0006, "Rumble: men seated at the bell (2..12; 12 = every stock wrestler, nobody left to walk in = a battle royale).")
+MODE_RULE(MODE_R_LIVE_CAP,      "rumble_live_cap",    0x0006, "Rumble: most men in the ring at once (stock 6, up to 12).")
+MODE_RULE(MODE_R_SPAWN_FRAMES,  "rumble_spawn_frames",0x0126, "Rumble: frames between entrances (57 = one second; 0x126 stock).")
+MODE_RULE(MODE_RUNIN,           "runin_enabled",      0x0001, "1 = tag partners can run in (usher, pin saves); 0 = the apron man stays put.")
+MODE_RULE(MODE_TEAM_SIZE_B,     "team_size_b",        0x0000, "Side B's team size, 0 = same as team_size (handicap matches: 1 vs 2).")
+MODE_RULE(MODE_ELIM,            "elimination",        0x0000, "1 = ELIMINATION rules: a pinned man leaves, the match runs until a side is empty.")
+MODE_RULE(MODE_MIRROR,          "mirror_picks",       0x0000, "1 = both players may pick the same wrestler; the second copy gets an alternate palette.")
+MODE_RULE(MODE_CAGE_ESCAPE,     "cage_escape_win",    0x0000, "1 = in the cage (scene 1) climbing out over the wall wins the match.")
+MODE_RULE(MODE_SELECT_EXT,      "select_extended",    0x0000, "1 = SELECT PLAYERS grows to a 2x6 grid: a third page column holds the LEGION OF DOOM (Hawk pos 10, Animal pos 11), and B2 on any cell cycles to a registered clone of that wrestler (B1 still picks). On automatically when a clone slot is registered.")

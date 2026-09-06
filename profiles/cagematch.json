@@ -1,0 +1,10 @@
+{
+  "name": "cagematch",
+  "description": "cage match: escape over the wall to win (cagematch) + strikes knock climbers off the buckle (extmoves)",
+  "category": "modes",
+  "mods": ["cagematch", "extmoves"],
+  "mode": "tag",
+  "arenas": {
+    "0": "cage"
+  }
+}

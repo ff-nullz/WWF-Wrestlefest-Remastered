@@ -1,0 +1,7 @@
+{
+  "format": "wfengine-ropes-1",
+  "note": "the side ropes (stream row 14): poses 0..10 on one canvas; idle back 2 / front 10, the shake steps come from the ROM tables (ringhw.c). origin = the rope object's point inside the canvas",
+  "canvas": [128, 160],
+  "origin": [64, 80],
+  "frames": ["side_00.png", "side_01.png", "side_02.png", "side_03.png", "side_04.png", "side_05.png", "side_06.png", "side_07.png", "side_08.png", "side_09.png", "side_10.png"]
+}

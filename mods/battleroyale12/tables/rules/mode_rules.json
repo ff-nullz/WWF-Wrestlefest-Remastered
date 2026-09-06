@@ -1,0 +1,11 @@
+{
+  "name": "mode_rules",
+  "group": "rules",
+  "kind": "u16",
+  "desc": "sparse mod layer of mode_rules: only the rules it sets, merged over the stock table in profile order",
+  "overrides": {
+    "weapons_mode": 0,
+    "rumble_bell": 12,
+    "rumble_live_cap": 12
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "sandbox",
+  "description": "free-for-all trainer: endless run-in brawls, slow ring-out count",
+  "mods": [
+    "sandbox"
+  ],
+  "category": "practice",
+  "mode": "tag"
+}

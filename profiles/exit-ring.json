@@ -1,0 +1,9 @@
+{
+  "name": "exit-ring",
+  "description": "exit the ring: hold into a rope to hop out (exitring)",
+  "category": "fun",
+  "mode": "tag",
+  "mods": [
+    "exitring"
+  ]
+}

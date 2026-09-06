@@ -1,0 +1,17 @@
+wfengine
+*.ppm
+build/
+rom/*
+!rom/README.md
+jobs/
+exports/
+data/tables/
+data/wrestlers/
+data/gfx-edit/
+data/sound/
+data/sounds/
+data/stockskins/
+data/music/
+data/generics/
+data/classes/
+data/stock.json

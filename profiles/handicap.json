@@ -1,0 +1,9 @@
+{
+  "name": "handicap",
+  "description": "handicap: you alone against a tag team (1 vs 2, team_size 1 / team_size_b 2)",
+  "mods": [
+    "handicap"
+  ],
+  "category": "modes",
+  "mode": "tag"
+}

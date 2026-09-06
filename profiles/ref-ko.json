@@ -1,0 +1,9 @@
+{
+  "name": "ref-ko",
+  "description": "referee knockdown: strikes floor the referee, no counts until he recovers (refko)",
+  "category": "fun",
+  "mode": "tag",
+  "mods": [
+    "refko"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "mode_rules",
+  "group": "rules",
+  "kind": "u16",
+  "desc": "sparse mod layer of mode_rules: only the rules it sets, merged over the stock table in profile order",
+  "overrides": {
+    "team_size": 1,
+    "team_size_b": 2
+  }
+}

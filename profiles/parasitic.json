@@ -1,0 +1,9 @@
+{
+  "name": "parasitic",
+  "description": "parasitic energy - every hit feeds the hitter what it takes from the victim (parasitic_pct)",
+  "mods": [
+    "parasitic"
+  ],
+  "category": "fun",
+  "mode": "tag"
+}

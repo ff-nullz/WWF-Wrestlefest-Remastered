@@ -1,0 +1,9 @@
+{
+  "name": "mirror",
+  "description": "pick the same wrestler twice - the second copy wears an alternate palette (mirror_picks)",
+  "category": "modes",
+  "mods": [
+    "mirror"
+  ],
+  "mode": "tag"
+}

@@ -1,0 +1,9 @@
+{
+  "name": "clones",
+  "description": "example clone slot: id 12 HOLLYWOOD, a re-palette Hogan clone (reach him with WF_CLONE=12)",
+  "mods": [
+    "clones"
+  ],
+  "category": "roster",
+  "mode": "tag"
+}

@@ -1,0 +1,9 @@
+{
+  "name": "turbo",
+  "description": "turbo - wrestlers move and animate at 160% (turbo 1..5 = 120..200%), clocks at real time",
+  "mods": [
+    "turbo"
+  ],
+  "category": "fun",
+  "mode": "tag"
+}

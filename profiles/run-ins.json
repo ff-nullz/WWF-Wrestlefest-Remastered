@@ -1,0 +1,9 @@
+{
+  "name": "run-ins",
+  "description": "random run-ins every ~3 s (runins)",
+  "category": "fun",
+  "mode": "tag",
+  "mods": [
+    "runins"
+  ]
+}

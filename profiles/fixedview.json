@@ -1,0 +1,9 @@
+{
+  "name": "fixedview",
+  "description": "locked full-ring view - the camera never moves",
+  "mods": [
+    "fixedview"
+  ],
+  "category": "camera",
+  "mode": "tag"
+}

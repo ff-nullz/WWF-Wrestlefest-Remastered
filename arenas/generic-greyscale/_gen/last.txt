@@ -1,0 +1,1 @@
+arenas/generic-ring/_gen/ring/ring.png

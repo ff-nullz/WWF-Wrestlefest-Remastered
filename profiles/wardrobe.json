@@ -1,0 +1,8 @@
+{
+  "name": "wardrobe",
+  "description": "stock game + palette select: press B2 on a select cell to cycle outfits",
+  "category": "misc",
+  "mode": "tag",
+  "mods": ["wardrobe"],
+  "disabled": []
+}

@@ -1,0 +1,9 @@
+{
+  "name": "ringout_rules",
+  "group": "rules",
+  "kind": "u16",
+  "desc": "sparse mod layer of ringout_rules: only the rules it sets, merged over the stock table in profile order (wfengine --sparsify)",
+  "overrides": {
+    "frames_per_count": 200
+  }
+}

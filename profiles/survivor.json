@@ -1,0 +1,9 @@
+{
+  "name": "survivor",
+  "description": "survivor series: 3-on-3 with elimination rules - a pinned man leaves, the match runs until a side is empty",
+  "mods": [
+    "survivor"
+  ],
+  "category": "modes",
+  "mode": "tag"
+}

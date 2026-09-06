@@ -1,0 +1,9 @@
+{
+  "name": "battle-royale-12",
+  "description": "12-MAN BATTLE ROYALE: all twelve in the ring at the bell, no walk-ins, last man standing (over the top rope) wins",
+  "category": "modes",
+  "mode": "rumble",
+  "mods": [
+    "battleroyale12"
+  ]
+}

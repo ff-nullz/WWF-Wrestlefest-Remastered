@@ -1,0 +1,13 @@
+{
+ "note": "over-head badges (chips.c, mod rules badge_human / badge_cpu): PNGs up to 96x96, at most 15 colours each, an own palette bank; drawn clean at 13 px tall - replace with any art (codex) of the same names. ref_down_0/1/2 = the referee KNOCKED OUT (ref_knockdown mod rule): falling, mid-fall, flat (held) - drawn bottom-centre at his feet; codex-generated from the in-game ref frame, installed with --art-key 92 92",
+ "badges": {
+  "p1": "p1.png",
+  "p2": "p2.png",
+  "p3": "p3.png",
+  "p4": "p4.png",
+  "cpu": "cpu.png",
+  "ref_down_0": "ref_down_0.png",
+  "ref_down_1": "ref_down_1.png",
+  "ref_down_2": "ref_down_2.png"
+ }
+}

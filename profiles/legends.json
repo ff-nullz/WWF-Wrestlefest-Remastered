@@ -1,0 +1,9 @@
+{
+  "name": "legends",
+  "description": "extended select screen: the LEGION OF DOOM join the grid (2x6), B2 cycles registered clones",
+  "mods": [
+    "legends"
+  ],
+  "category": "modes",
+  "mode": "tag"
+}

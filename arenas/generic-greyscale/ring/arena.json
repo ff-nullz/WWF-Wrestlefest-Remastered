@@ -1,0 +1,57 @@
+{
+  "format": "wfengine-arena-3",
+  "scene": 0,
+  "stage": 0,
+  "cam": [480, 567],
+  "origin": [10, 40],
+  "size_units": [20, 16],
+  "unit_px": 32,
+  "layers": {
+    "under": {
+      "frames": ["crowd_0.png", "crowd_1.png", "crowd_2.png"],
+      "steps": [
+        {
+          "frame": 0,
+          "ticks": 4
+        },
+        {
+          "frame": 1,
+          "ticks": 4
+        },
+        {
+          "frame": 0,
+          "ticks": 4
+        },
+        {
+          "frame": 1,
+          "ticks": 4
+        },
+        {
+          "frame": 0,
+          "ticks": 4
+        },
+        {
+          "frame": 1,
+          "ticks": 4
+        },
+        {
+          "frame": 2,
+          "ticks": 4
+        },
+        {
+          "frame": 1,
+          "ticks": 4
+        }
+      ],
+      "overlay": "ring.png",
+      "overlay_rect": [0, 13, 40, 19],
+      "overlays": ["ring.png", "ropes_back.png"]
+    },
+    "over": {
+      "frames": ["ropes.png"]
+    }
+  },
+  "note": "layers.under = the plane drawn UNDER the sprites: crowd frames (whole plane, one per step) with the overlay (ring/floor) composited on top at pack time; layers.over = the plane drawn OVER the sprites (rope lines / the ringside far crowd); ticks per step; palettes 16 banks x 16 pens",
+  "palettes": "derived from the art at pack time (16 banks x 15 colours per plane, greedy per cell)",
+  "roles": "roles.png"
+}

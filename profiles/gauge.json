@@ -1,0 +1,9 @@
+{
+  "name": "gauge",
+  "description": "grapple gauge over a grappling pair (gauge)",
+  "category": "misc",
+  "mode": "tag",
+  "mods": [
+    "gauge"
+  ]
+}

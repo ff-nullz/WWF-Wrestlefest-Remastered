@@ -1,0 +1,9 @@
+{
+  "name": "game_rules",
+  "group": "rules",
+  "kind": "u16",
+  "desc": "sparse mod layer of game_rules: only the rules it sets, merged over the stock table in profile order",
+  "overrides": {
+    "grapple_gauge": 1
+  }
+}
